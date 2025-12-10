@@ -1,5 +1,8 @@
 package org.aitkulov.maven.task.shape;
 
+/**
+ * Circle shape implementation.
+ */
 public class Circle implements Shape {
     private final double radius;
 

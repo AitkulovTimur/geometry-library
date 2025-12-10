@@ -1,5 +1,8 @@
 package org.aitkulov.maven.task.shape;
 
+/**
+ * Triangle shape implementation.
+ */
 public class Triangle implements Shape {
     private final double side1;
     private final double side2;
