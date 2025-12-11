@@ -1,10 +1,10 @@
 package org.aitkulov.maven.task.manipulation;
 
-import org.aitkulov.maven.task.shape.Shape;
+import org.aitkulov.maven.task.shape.TwoDShape;
 
 
 public class ShapeUtils {
-    public static String compareByQuantityAndGetInfo(Shape shapeToCompare1, Shape shapeToCompare2,
+    public static String compareByQuantityAndGetInfo(TwoDShape shapeToCompare1, TwoDShape shapeToCompare2,
                                                      GeometricQuantities compareByParameter) {
         double shapeToCompare1Value = compareByParameter == GeometricQuantities.AREA ?
                 shapeToCompare1.calculateArea() :
@@ -22,13 +22,13 @@ public class ShapeUtils {
         }
     }
 
-    private static String getComparisonResultInfoIfNotEqual(Shape biggerShape, Shape smallestShape,
+    private static String getComparisonResultInfoIfNotEqual(TwoDShape biggerShape, TwoDShape smallestShape,
                                                             GeometricQuantities compareByParameter) {
         return String.format(UtilsConstants.COMPARE_RESULT_TEMPLATE_NOT_EQUAL.getValue(), compareByParameter.getValue(),
                 biggerShape, compareByParameter.getValue(), smallestShape);
     }
 
-    private static String getComparisonResultInfoIfEqual(Shape shapeToCompare1, Shape shapeToCompare2,
+    private static String getComparisonResultInfoIfEqual(TwoDShape shapeToCompare1, TwoDShape shapeToCompare2,
                                                          GeometricQuantities compareByParameter) {
         return String.format(UtilsConstants.COMPARE_RESULT_TEMPLATE_EQUAL.getValue(), compareByParameter.getValue(),
                 shapeToCompare1, compareByParameter.getValue(), shapeToCompare2);

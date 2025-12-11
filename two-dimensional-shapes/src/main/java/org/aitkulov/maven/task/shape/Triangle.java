@@ -3,7 +3,7 @@ package org.aitkulov.maven.task.shape;
 /**
  * Triangle shape implementation.
  */
-public class Triangle implements Shape {
+public class Triangle implements TwoDShape {
     private final double side1;
     private final double side2;
     private final double side3;

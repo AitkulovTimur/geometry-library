@@ -1,9 +1,9 @@
 package org.aitkulov.maven.task.shape;
 
 /**
- * Shape interface with common operations.
+ * TwoDShape interface with common operations.
  */
-public interface Shape {
+public interface TwoDShape {
     double calculateArea();
 
     double calculatePerimeter();

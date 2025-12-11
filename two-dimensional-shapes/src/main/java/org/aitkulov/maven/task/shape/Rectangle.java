@@ -3,7 +3,7 @@ package org.aitkulov.maven.task.shape;
 /**
  * Rectangle shape implementation.
  */
-public class Rectangle implements Shape {
+public class Rectangle implements TwoDShape {
     private final double width;
     private final double height;
 

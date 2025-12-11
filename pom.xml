@@ -6,11 +6,13 @@
 
     <groupId>org.aitkulov.maven.task</groupId>
     <artifactId>geometry-library</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>pom</packaging>
+
     <modules>
         <module>geometry-utils</module>
-        <module>geometry-model</module>
+        <module>two-dimensional-shapes</module>
+        <module>three-dimensional-shapes</module>
     </modules>
 
     <properties>

@@ -3,7 +3,7 @@ package org.aitkulov.maven.task.shape;
 /**
  * Circle shape implementation.
  */
-public class Circle implements Shape {
+public class Circle implements TwoDShape {
     private final double radius;
 
     public Circle(double radius) {
