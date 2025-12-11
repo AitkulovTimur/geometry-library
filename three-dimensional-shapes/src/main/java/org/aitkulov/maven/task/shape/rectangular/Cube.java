@@ -1,4 +1,6 @@
-package org.aitkulov.maven.task.shape;
+package org.aitkulov.maven.task.shape.rectangular;
+
+import org.aitkulov.maven.task.shape.ThreeDShape;
 
 /**
  * Cube shape implementation.
