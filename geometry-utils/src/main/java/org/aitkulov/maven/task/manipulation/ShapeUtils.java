@@ -4,8 +4,8 @@ import org.aitkulov.maven.task.shape.Shape;
 
 
 public class ShapeUtils {
-    public static String compareByAndGetInfo(Shape shapeToCompare1, Shape shapeToCompare2,
-                                             GeometricQuantities compareByParameter) {
+    public static String compareByQuantityAndGetInfo(Shape shapeToCompare1, Shape shapeToCompare2,
+                                                     GeometricQuantities compareByParameter) {
         double shapeToCompare1Value = compareByParameter == GeometricQuantities.AREA ?
                 shapeToCompare1.calculateArea() :
                 shapeToCompare1.calculatePerimeter();
@@ -14,24 +14,22 @@ public class ShapeUtils {
                 shapeToCompare2.calculatePerimeter();
 
         if (shapeToCompare1Value > shapeToCompare2Value) {
-            return returnComparisonResultInfoIfNotEqual(shapeToCompare1, shapeToCompare2, compareByParameter);
+            return getComparisonResultInfoIfNotEqual(shapeToCompare1, shapeToCompare2, compareByParameter);
         } else if (shapeToCompare1Value < shapeToCompare2Value) {
-            return returnComparisonResultInfoIfNotEqual(shapeToCompare2, shapeToCompare1, compareByParameter);
+            return getComparisonResultInfoIfNotEqual(shapeToCompare2, shapeToCompare1, compareByParameter);
         } else {
-            return returnComparisonResultInfoIfEqual(shapeToCompare1, shapeToCompare2, compareByParameter);
+            return getComparisonResultInfoIfEqual(shapeToCompare1, shapeToCompare2, compareByParameter);
         }
-
-
     }
 
-    private static String returnComparisonResultInfoIfNotEqual(Shape biggerShape, Shape smallestShape,
-                                                               GeometricQuantities compareByParameter) {
+    private static String getComparisonResultInfoIfNotEqual(Shape biggerShape, Shape smallestShape,
+                                                            GeometricQuantities compareByParameter) {
         return String.format(UtilsConstants.COMPARE_RESULT_TEMPLATE_NOT_EQUAL.getValue(), compareByParameter.getValue(),
                 biggerShape, compareByParameter.getValue(), smallestShape);
     }
 
-    private static String returnComparisonResultInfoIfEqual(Shape shapeToCompare1, Shape shapeToCompare2,
-                                                            GeometricQuantities compareByParameter) {
+    private static String getComparisonResultInfoIfEqual(Shape shapeToCompare1, Shape shapeToCompare2,
+                                                         GeometricQuantities compareByParameter) {
         return String.format(UtilsConstants.COMPARE_RESULT_TEMPLATE_EQUAL.getValue(), compareByParameter.getValue(),
                 shapeToCompare1, compareByParameter.getValue(), shapeToCompare2);
     }
